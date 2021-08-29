@@ -7,14 +7,23 @@ pipeline{
     stage("build") {
       steps{
         echo "currently building application"
-        publishHTML (target : [
-          allowMissing: false,
-          alwaysLinkToLastBuild: true,
-          keepAll: true,
-          reportDir: '',
-          reportFiles: 'index.html',
-          reportName: 'My Reports',
-          reportTitles: 'The Report'])
+//         publishHTML (target : [
+//           allowMissing: false,
+//           alwaysLinkToLastBuild: true,
+//           keepAll: true,
+//           reportDir: '',
+//           reportFiles: 'index.html',
+//           reportName: 'My Reports',
+//           reportTitles: 'The Report'])
+        
+        publishHTML([
+          allowMissing: false, 
+          alwaysLinkToLastBuild: false, 
+          keepAll: false, 
+          reportDir: ‘coverage’, 
+          reportFiles: ‘index.html’, 
+          reportName: ‘HTML Report’, 
+          reportTitles: ‘Coverage Report’])
       }
     }
     
