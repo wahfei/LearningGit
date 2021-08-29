@@ -8,10 +8,10 @@ pipeline{
       steps{
         echo "currently building application"
         // Checkout
-        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217';
+        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217;
 
         // Checkout
-        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217';
+        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217;
 
         // install required bundles
         sh 'bundle install'
@@ -31,7 +31,7 @@ pipeline{
           reportName: 'HTML Report', 
           reportTitles: 'Coverage Report'])
       }
-    
+    }
      stage("test") {
       steps{
         echo "currently testing application"
@@ -44,4 +44,5 @@ pipeline{
       }
     }
     
-    }
+  }
+}
