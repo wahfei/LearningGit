@@ -8,10 +8,10 @@ pipeline{
       steps{
         echo "currently building application"
         // Checkout
-        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217';
+        git branch: 'main',url: 'https://github.com/wahfei/LearningGit.git';
 
         // Checkout
-        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217';
+        git branch: 'main',url: 'https://github.com/wahfei/LearningGit.git';
 
         // install required bundles
         sh 'bundle install'
