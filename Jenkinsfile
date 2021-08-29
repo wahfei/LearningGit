@@ -8,19 +8,19 @@ pipeline{
       steps{
         echo "currently building application"
         // Checkout
-        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217;
+        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217';
 
         // Checkout
-        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217;
+        git branch: 'master',url: 'https://github.com/devops81/HTMLPublisher.git&#8217';
 
         // install required bundles
-        sh ‘bundle install’
+        sh 'bundle install'
 
         // build and run tests with coverage
-        sh ‘bundle exec rake build spec’
+        sh 'bundle exec rake build spec'
 
         // Archive the built artifacts
-        archive (includes: ‘pkg/*.gem’)
+        archive (includes: 'pkg/*.gem')
         
         publishHTML([
           allowMissing: false, 
