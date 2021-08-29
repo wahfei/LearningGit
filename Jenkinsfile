@@ -20,10 +20,10 @@ pipeline{
           allowMissing: false, 
           alwaysLinkToLastBuild: false, 
           keepAll: false, 
-          reportDir: ‘coverage’, 
-          reportFiles: ‘index.html’, 
-          reportName: ‘HTML Report’, 
-          reportTitles: ‘Coverage Report’])
+          reportDir: 'coverage', 
+          reportFiles: 'index.html', 
+          reportName: 'HTML Report', 
+          reportTitles: 'Coverage Report'])
       }
     }
     
