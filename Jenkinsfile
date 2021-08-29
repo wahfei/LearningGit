@@ -7,20 +7,7 @@ pipeline{
     stage("build") {
       steps{
         echo "currently building application"
-        // Checkout
-        git branch: 'main',url: 'https://github.com/wahfei/LearningGit.git';
-
-        // Checkout
-        git branch: 'main',url: 'https://github.com/wahfei/LearningGit.git';
-
-        // install required bundles
-        sh 'bundle install'
-
-        // build and run tests with coverage
-        sh 'bundle exec rake build spec'
-
-        // Archive the built artifacts
-        archive (includes: 'pkg/*.gem')
+       
         
         publishHTML([
           allowMissing: false, 
